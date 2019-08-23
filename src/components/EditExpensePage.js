@@ -30,8 +30,8 @@ const mapStateToProps = (state, props) => ({
   )
 });
 const mapDispatchToProps = (dispatch) => ({
-  editExpense: dispatch(editExpense(id, updates)),
-  removeExpense: dispatch(removeExpense(expense))
+  editExpense: (id, updates) => dispatch(editExpense(id, updates)),
+  removeExpense: (expense) => dispatch(removeExpense(expense))
 });
 export default connect(
   mapStateToProps,
