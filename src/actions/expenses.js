@@ -1,6 +1,5 @@
 // import uuid from "uuid";
 import database from "../firebase/firebase";
-import { resolve } from "url";
 //ADD_Expense
 export const addExpense = (expense) => ({
   type: "ADD_EXPENSE",
