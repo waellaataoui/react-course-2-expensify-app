@@ -1,0 +1,40 @@
+.list {
+  margin-bottom: $l-size;
+}
+.list__header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e5e5e5;
+  padding: 0 $s-size;
+  background-color: #f7f7f7;
+  color: #666666;
+}
+.list__item {
+  @extend .list__header;
+  color: $dark-gray;
+  border-top: none;
+  text-decoration: none;
+  background-color: #fff;
+  transition: background 0.3s ease;
+  align-items: center;
+  padding: $s-size;
+  &:hover {
+    background-color: #f7f7f7;
+  }
+}
+.list__item__title {
+  margin: 0;
+  word-break: break-all;
+}
+.list__item__subtitle {
+  color: #666;
+  font-size: $font-size-small;
+}
+.list__msg {
+  margin: 0;
+  padding: $m-size;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  color: #666;
+}

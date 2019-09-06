@@ -1,7 +1,9 @@
-import React from "react";
-import moment from "moment";
 import "react-dates/initialize";
+
+import moment from "moment";
+import React from "react";
 import { SingleDatePicker } from "react-dates";
+
 export default class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
@@ -66,10 +68,13 @@ export default class ExpenseForm extends React.Component {
   };
   render() {
     return (
-      <div>
-        {this.state.error && <p> {this.state.error}</p>}
+      <div className="content-container">
+        {this.state.error && (
+          <p className="form__error-message"> {this.state.error}</p>
+        )}
         <form onSubmit={this.onSubmit}>
           <input
+            className="text-input"
             type="text"
             placeholder="Description"
             autoFocus
@@ -77,11 +82,13 @@ export default class ExpenseForm extends React.Component {
             onChange={this.onDescriptionChange}
           />
           <input
+            className="text-input"
             type="text"
-            placeholder="amount"
+            placeholder="Amount"
             value={this.state.amount}
             onChange={this.onAmountChange}
           />
+
           <SingleDatePicker
             date={this.state.createdAt}
             onDateChange={this.onDateChange}
@@ -90,15 +97,18 @@ export default class ExpenseForm extends React.Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
+
           <textarea
+            className="text-area"
             placeholder="Add a note for your expense(optional)"
             value={this.state.note}
             onChange={this.onNoteChange}
           />
-
-          <button>
-            {this.props.expense ? "Edit Expense" : "Add Expense"}{" "}
-          </button>
+          <div>
+            <button className="button">
+              {this.props.expense ? "Edit Expense" : "Add Expense"}{" "}
+            </button>
+          </div>
         </form>
       </div>
     );

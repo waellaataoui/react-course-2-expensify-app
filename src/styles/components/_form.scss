@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-bottom: $m-size;
+  }
+}
+
+.form__error-message {
+  color: #f12d2d;
+  font-size: 1.8rem;
+  font-style: italic;
+  margin-left: $s-size;
+}
+
+.SingleDatePicker {
+  .SingleDatePickerInput {
+    display: block;
+    border: 1px solid #cacccd;
+  }
+  .DateInput {
+    width: 100%;
+  }
+  .DateInput_input__focused {
+    border: none;
+  }
+}

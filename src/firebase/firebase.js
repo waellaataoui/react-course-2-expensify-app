@@ -8,7 +8,6 @@ const config = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: "1:299168579997:web:3197eafbf8a2619c"
 };
-console.log(config);
 firebase.initializeApp(config);
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
